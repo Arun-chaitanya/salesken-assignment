@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <audio></audio>
+  <div class="canvasContainer">
+    <canvas onclick="change_music_duration(event)"></canvas>
+    <div class="tags tag1">Introduction </div>
+    <div class="tags tag2">One_Six</div>
+    <div class="tags tag3">Polite</div>
+    <div class="tags tag4">Rapport Building</div>
+  </div>
+ 
+  <div class="controls">
+    <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+    <div class="volume">
+      <!-- Sound icon -->
+      <button onclick="toggle_sound_mute()" id="volume_icon"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      <!-- mute icon -->
+      <button id="mute_icon" onclick="toggle_sound_mute()"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+      
+      <!-- sound slider -->
+      <input id="volume_slider" type="range" min="0" max="100" value="90" onchange="volume_change()">
+      <p id="volume_show">90</p>
+    </div>
+  </div>
+  <audio id="music" src="song.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
